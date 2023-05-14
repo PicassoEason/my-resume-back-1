@@ -1,0 +1,19 @@
+I don't know how to find my jwt token
+
+# RUN START Server
+```
+npm run dev
+```
+
+# Node_module
+
+```
+npm i
+```
+
+# private_key
+
+.env 
+```
+db="your mongoodb key"
+```
