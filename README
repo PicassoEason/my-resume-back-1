@@ -13,7 +13,20 @@ npm i
 
 # private_key
 
-.env 
+env 
+
 ```
 db="your mongoodb key"
+JWTPRIVATEKEY="your want ?"
+```
+
+token 放crud
+
+
+MESSAGE CRUD
+```
+http://localhost:8080/api/MessageBoard/megs      GET ALL message
+http://localhost:8080/api/MessageBoard/megs      Post Create message
+http://localhost:8080/api/MessageBoard/megs/:id  Put Renew id item
+http://localhost:8080/api/MessageBoard/megs/:id  Delete id item 
 ```
