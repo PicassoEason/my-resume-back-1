@@ -7,6 +7,7 @@ const userRoutes = require("./routes/users");
 const authRoutes = require("./routes/auth");
 const productRoutes = require("./routes/products");
 const MsgsRoutes = require("./routes/BoardDispaly");
+const authenticateJWT = require('./routes/middleware')
 
 // database connection
 connection();

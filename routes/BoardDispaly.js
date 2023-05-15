@@ -1,8 +1,10 @@
 const router = require("express").Router();
 const Mes  = require('../models/mesboardModel')
 const connection = require("../db");
+const authenticateJWT=require('./middleware')
 
 connection();
+
 //Read product route GET all product
 router.get('/megs', async(req, res) => {
     try{
@@ -26,7 +28,7 @@ router.get('/megs/:id', async(req, res) => {
 
 
 //Create product route
-router.post('/megs', async(req, res) => {
+router.post('/megs',authenticateJWT, async(req, res) => {
     try{
         const messages=await Mes.create(req.body)
         res.status(200).send(messages);
