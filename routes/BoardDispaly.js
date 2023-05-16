@@ -6,7 +6,7 @@ const authenticateJWT=require('./middleware')
 connection();
 
 //Read product route GET all product
-router.get('/megs', async(req, res) => {
+router.get('/', async(req, res) => {
     try{
         const messages=await Mes.find({})
         res.status(200).send({ message: messages });
