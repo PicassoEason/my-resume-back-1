@@ -38,7 +38,7 @@ router.post('/megs',authenticateJWT, async(req, res) => {
   })
 
 //Update data or Edit data
-router.put('/megs/:id', async(req, res) => {
+router.put('/megs/:id',authenticateJWT, async(req, res) => {
     try{
         const {id} =req.params
         const messages=await Mes.findByIdAndUpdate(id,req.body)
@@ -53,7 +53,7 @@ router.put('/megs/:id', async(req, res) => {
   })
   
   //delete a product
-  router.delete('/megs/:id', async(req, res) => {
+  router.delete('/megs/:id',authenticateJWT, async(req, res) => {
       try{
           const {id} =req.params
           const messages=await Mes.findByIdAndDelete(id,req.body)
